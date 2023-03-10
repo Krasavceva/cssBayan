@@ -1,0 +1,13 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.faq{
+    max-width: 50%;
+    margin: 0 auto;
+    border: 1px solid;
+}
+img{
+    max-width: 50%;
+}
