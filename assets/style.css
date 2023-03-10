@@ -1,13 +1,59 @@
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    background-color: #00242E;  
 }
-
-.faq{
+.container{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     max-width: 50%;
-    margin: 0 auto;
-    border: 1px solid;
+    margin: 20px auto;
+    text-align: center;
+}
+.title{
+    color: #8D6D25;
+    border-bottom: 1px solid #8D6D25;
 }
 img{
     max-width: 50%;
+    margin: 5px 0;
+}
+.faq-item{
+    margin-bottom: 5px;
+    border: 1px solid #8D6D25;
+    border-radius: 10px;
+    
+}
+
+.faq-img{
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+.faq-item:hover > .faq-img{
+display: flex;
+}
+.faq-title{
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+    transition: background 1s ease-out;
+    position: relative;
+}
+.faq-title:hover{
+    background-color: #8D6D25;
+}
+.faq-input{
+    appearance: none;
+    position: absolute;
+}
+.faq-input:checked ~ .faq-title{
+    background-color: #8D6D25;
+}
+
+.faq-input:checked ~ .faq-img{
+    display: block;
+}
+.faq-img{
+    
+
 }
