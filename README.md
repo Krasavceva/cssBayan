@@ -1,1 +1,1 @@
-https://Krasavceva.github.io/cssBayan/cssBayan/index.html
+https://krasavceva.github.io/cssBayan/
