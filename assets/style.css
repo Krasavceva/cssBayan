@@ -61,7 +61,6 @@ body{
     display: flex;
     animation: animate_reduce 1s forwards;
 }
-
 .faq-title__container{
     display: flex;
     justify-content: space-between;
@@ -93,8 +92,6 @@ body{
      justify-content: center;
  }
 
-
-
  .faq:hover
  > .faq-item
  > .faq-title
@@ -115,5 +112,18 @@ body{
 
 
 /* media */
+
+
+@media screen and (min-width: 320px){
+    
+}
+
+@media (hover: hover) {
+
+
+
+
+    
+}
 
 /* mobile 320x568, tablet 820x1180, desktop 1920×1080 */
