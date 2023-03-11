@@ -1,59 +1,119 @@
-body{
-    background-color: #00242E;  
+@keyframes animate_reduce {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(0.95, 0.95, 0.95);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
 }
-.container{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+@keyframes ani {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+body{
+    background-color: #00242E; 
+}
+
+.wrapper{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     max-width: 50%;
     margin: 20px auto;
-    text-align: center;
 }
+
 .title{
     color: #8D6D25;
     border-bottom: 1px solid #8D6D25;
 }
-img{
-    max-width: 50%;
-    margin: 5px 0;
+.faq-input{
+    -webkit-appearance: none;
+    appearance: none;
 }
 .faq-item{
     margin-bottom: 5px;
     border: 1px solid #8D6D25;
     border-radius: 10px;
-    
+}
+.mem{
+    max-width: 50%;
+    margin: 5px 0;
+    animation: animate_reduce 1s forwards;
+}
+.btn{
+    width: 1.5rem;
+    height: 1.5rem; 
+    visibility: hidden;
+}
+.faq-input:checked + label > .faq-title__container > .btn {
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+  }
+
+.faq-input:checked + .faq-title > .faq-img{
+    display: flex;
+    animation: animate_reduce 1s forwards;
 }
 
-.faq-img{
+.faq-title__container{
     display: flex;
-    justify-content: center;
-    display: none;
-}
-.faq-item:hover > .faq-img{
-display: flex;
-}
+    justify-content: space-between;
+    width: 100%;
+    }
+
 .faq-title{
-    color: white;
     padding: 10px 15px;
-    font-size: 18px;
     display: block;
-    cursor: pointer;
+    cursor: pointer; 
+    font-size: 18px;
+    color: white;
     transition: background 1s ease-out;
     position: relative;
-}
+    }
 .faq-title:hover{
-    background-color: #8D6D25;
-}
-.faq-input{
-    appearance: none;
-    position: absolute;
+    background-color:#8d6e2579;
+    }
+
+ .faq-input:checked ~ .faq-img{
+    display: block;
 }
 .faq-input:checked ~ .faq-title{
     background-color: #8D6D25;
-}
-
-.faq-input:checked ~ .faq-img{
-    display: block;
+    border-radius: 10px;
 }
 .faq-img{
-    
+     display: none;
+     justify-content: center;
+ }
 
+
+
+ .faq:hover
+ > .faq-item
+ > .faq-title
+ > .faq-title__container
+ > .btn {
+ visibility: visible;
 }
+
+.faq-item:hover > .faq-title > .faq-title__container > .btn {
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+  }
+.faq-item:hover .faq-img {
+    display: block;
+    display: flex;
+    justify-content: center;
+  }
+
+
+/* media */
+
+/* mobile 320x568, tablet 820x1180, desktop 1920×1080 */
